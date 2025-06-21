@@ -220,7 +220,7 @@
   ],
   "generator": "pub",
   "generatorVersion": "3.8.1",
-  "flutterRoot": "file:///Users/tsukudajukiya/fvm/versions/stable",
+  "flutterRoot": "file:///Users/tsukudajukiya/fvm/versions/3.32.2",
   "flutterVersion": "3.32.2",
   "pubCache": "file:///Users/tsukudajukiya/.pub-cache"
 }
