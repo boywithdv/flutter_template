@@ -6,10 +6,25 @@ Flutterアプリケーション開発のためのテンプレートプロジェ�
 
 このプロジェクトは以下の特徴を持っています：
 
-- **Meloモノレポ**: 複数のパッケージを効率的に管理
+- **Melosモノレポ**: 複数のパッケージを効率的に管理
 - **Flutter 3.8.1+**: 最新のFlutter SDKに対応
 - **マルチプラットフォーム**: iOS、Android、Web、Desktop対応
 - **開発環境**: VS Code設定付き
+
+## 🚀 新しいプロジェクトを作成
+
+このテンプレートから新しいプロジェクトを作成する方法については、[TEMPLATE_USAGE.md](./TEMPLATE_USAGE.md)を参照してください。
+
+### クイックスタート
+
+```bash
+# 自動スクリプトを使用（推奨）
+./scripts/create_project.sh my_awesome_app
+
+# 作成されたプロジェクトに移動
+cd my_awesome_app
+code .
+```
 
 ## 🏗️ プロジェクト構造
 
