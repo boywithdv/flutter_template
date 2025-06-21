@@ -10,6 +10,23 @@ Flutterアプリケーション開発のためのテンプレートプロジェ�
 - **Flutter 3.8.1+**: 最新のFlutter SDKに対応
 - **マルチプラットフォーム**: iOS、Android、Web、Desktop対応
 - **開発環境**: VS Code設定付き
+- **Riverpodアーキテクチャ**: Clean Architecture + Riverpodによる状態管理
+
+## 🏗️ アーキテクチャ
+
+このテンプレートは、PlantUMLシーケンス図に基づいたRiverpodアーキテクチャを採用しています：
+
+### 3層アーキテクチャ
+- **Presentation層**: UIとユーザーインタラクション
+- **Domain層**: ビジネスロジックとエンティティ
+- **Infrastructure層**: 外部データソースとの通信
+
+### Riverpodパターン
+- **Query/Subscription**: `ref.watch`によるデータ取得・購読
+- **Refresh**: `ref.refresh`によるデータの再取得
+- **Mutation**: `ref.read`によるデータの変更
+
+詳細については、[ARCHITECTURE.md](./ARCHITECTURE.md)を参照してください。
 
 ## 🚀 新しいプロジェクトを作成
 
