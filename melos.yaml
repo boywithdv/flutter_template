@@ -1,0 +1,10 @@
+name: flutter_template
+
+packages:
+  - packages/**
+
+scripts:
+  test:
+    run: melos exec -c 1 -- "flutter test"
+    description: Run Flutter tests for all packages.
+
