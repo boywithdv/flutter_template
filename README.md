@@ -79,7 +79,7 @@ flutter_template/
    cd flutter_template
    ```
 
-2. **Meloをインストール**
+2. **Melosをインストール**
    ```bash
    dart pub global activate melos
    ```
