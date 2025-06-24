@@ -36,3 +36,10 @@ scripts:
     run: melos exec -- "flutter pub get"
     description: Get dependencies for all packages.
 
+  index:
+    name: index-generator
+    description: Generate barrel files for all packages
+    exec: dart run index_generator
+    packageFilters:
+      dependsOn: "index_generator"
+

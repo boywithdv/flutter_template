@@ -53,6 +53,9 @@ dev_dependencies:
   # Riverpod code generation
   riverpod_generator: ^2.4.0
   build_runner: ^2.4.13
+  
+  # Index file generator
+  index_generator: ^4.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -95,3 +98,24 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+# Index Generator Configuration
+index_generator:
+  exclude:
+    - '**.g.dart'
+    - '**.freezed.dart'
+    - '**.gr.dart'
+    - '**.gen.dart'
+  libraries:
+    - directory_path: lib/
+      file_name: app.dart
+      include:
+        - domain/
+        - infrastructure/
+        - presentation/
+    - directory_path: lib/domain/
+      file_name: domain.dart
+    - directory_path: lib/infrastructure/
+      file_name: infrastructure.dart
+    - directory_path: lib/presentation/
+      file_name: presentation.dart
