@@ -6,47 +6,46 @@ part of 'counter_providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$counterDataSourceHash() => r'e19519888740a45f11796902dae5f9107493cc74';
+String _$counterDataSourceHash() => r'5b8f0e97780bd017df4425bba4baf54db976642f';
 
 /// Provider for CounterDataSource
+/// This is a singleton provider to maintain state
 ///
 /// Copied from [counterDataSource].
 @ProviderFor(counterDataSource)
-final counterDataSourceProvider =
-    AutoDisposeProvider<CounterDataSource>.internal(
-      counterDataSource,
-      name: r'counterDataSourceProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$counterDataSourceHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+final counterDataSourceProvider = Provider<CounterDataSource>.internal(
+  counterDataSource,
+  name: r'counterDataSourceProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$counterDataSourceHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef CounterDataSourceRef = AutoDisposeProviderRef<CounterDataSource>;
-String _$counterRepositoryHash() => r'ac87e82b4b5f6e9b311df3b22260e588c8bb4540';
+typedef CounterDataSourceRef = ProviderRef<CounterDataSource>;
+String _$counterRepositoryHash() => r'eeb1e0032f9d97d3e47682445164f2a2684f3139';
 
 /// Provider for CounterRepository
 ///
 /// Copied from [counterRepository].
 @ProviderFor(counterRepository)
-final counterRepositoryProvider =
-    AutoDisposeProvider<CounterRepository>.internal(
-      counterRepository,
-      name: r'counterRepositoryProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$counterRepositoryHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+final counterRepositoryProvider = Provider<CounterRepository>.internal(
+  counterRepository,
+  name: r'counterRepositoryProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$counterRepositoryHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef CounterRepositoryRef = AutoDisposeProviderRef<CounterRepository>;
-String _$counterHash() => r'cf64b94e678d47647d9b18b39656de56f0850a9f';
+typedef CounterRepositoryRef = ProviderRef<CounterRepository>;
+String _$counterHash() => r'e950a5b93603e9bb13cf68ae27b27e3cb1845aa5';
 
 /// FutureProvider for getting counter value
 /// This demonstrates Query/Subscription pattern
@@ -66,7 +65,7 @@ final counterProvider = AutoDisposeFutureProvider<Counter>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef CounterRef = AutoDisposeFutureProviderRef<Counter>;
-String _$counterNotifierHash() => r'a851d74980518745c322fc281b0bf3b4cf1d597f';
+String _$counterNotifierHash() => r'29f847ba27495d72e71ad466a1d74aec0bd34ef6';
 
 /// Provider for counter increment operation
 /// This demonstrates Mutation pattern
@@ -74,7 +73,7 @@ String _$counterNotifierHash() => r'a851d74980518745c322fc281b0bf3b4cf1d597f';
 /// Copied from [CounterNotifier].
 @ProviderFor(CounterNotifier)
 final counterNotifierProvider =
-    AutoDisposeAsyncNotifierProvider<CounterNotifier, Counter>.internal(
+    AsyncNotifierProvider<CounterNotifier, Counter>.internal(
       CounterNotifier.new,
       name: r'counterNotifierProvider',
       debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -84,6 +83,6 @@ final counterNotifierProvider =
       allTransitiveDependencies: null,
     );
 
-typedef _$CounterNotifier = AutoDisposeAsyncNotifier<Counter>;
+typedef _$CounterNotifier = AsyncNotifier<Counter>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

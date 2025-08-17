@@ -6,12 +6,15 @@
     "configurations": [
         {
             "name": "flutter_template",
+            "cwd": "packages/flutter_app",
+            "program": "lib/main.dart",
             "request": "launch",
             "type": "dart"
         },
         {
             "name": "flutter_template_app",
             "cwd": "packages/flutter_app",
+            "program": "lib/main.dart",
             "request": "launch",
             "type": "dart"
         }
