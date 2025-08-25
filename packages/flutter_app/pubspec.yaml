@@ -38,8 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   
   # Riverpod for state management
-  flutter_riverpod: ^2.5.1
-  riverpod_annotation: ^2.3.5
+  flutter_riverpod: ^3.0.0-dev.17
+  riverpod_annotation: ^3.0.0-dev.17
 
 dev_dependencies:
   flutter_test:
@@ -53,8 +53,8 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   
   # Riverpod code generation
-  riverpod_generator: ^2.4.0
-  build_runner: ^2.4.13
+  riverpod_generator: ^3.0.0-dev.17
+  build_runner: ^2.7.0
   
   # Index file generator
   index_generator: ^4.0.0
