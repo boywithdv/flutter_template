@@ -1,1 +1,1 @@
-{"version":2,"entries":[{"package":"flutter_template_monorepo","rootUri":"../","packageUri":"lib/"}]}
+{"version":2,"entries":[{"package":"flutter_template_workspace","rootUri":"../","packageUri":"lib/"},{"package":"flutter_template","rootUri":"../packages/flutter_app/","packageUri":"lib/"}]}
