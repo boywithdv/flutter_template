@@ -188,7 +188,12 @@ melos bootstrap
 melos exec -- "flutter pub get"
 melos exec -- "flutter analyze"
 melos exec -- "flutter test"
+ 
+# パッケージ・依存関係のインデックスを表示
+melos index
 ```
+
+`melos index` は、ワークスペース内の全パッケージ・依存関係・スクリプトなどの一覧を表示します。パッケージの全体像や依存関係を素早く把握したいときに便利です。
 
 ### コード分析
 
