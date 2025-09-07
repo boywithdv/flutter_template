@@ -12,5 +12,11 @@ class AppRouter extends RootStackRouter {
   RouteType get defaultRouteType => const RouteType.material();
 
   @override
-  List<AutoRoute> get routes => [];
+  List<AutoRoute> get routes => [
+    AutoRoute(
+      page: CounterRoute.page,
+      initial: true,
+      meta: metaTransitionTypeFade,
+    ),
+  ];
 }
