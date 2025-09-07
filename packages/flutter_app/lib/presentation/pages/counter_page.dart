@@ -15,7 +15,7 @@ class CounterPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: ThemeData().appBarTheme.backgroundColor,
         title: const Text('Riverpod Counter Example'),
         actions: [
           // Refresh button to demonstrate ref.refresh
