@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -6,6 +7,7 @@ import '../widgets/counter_controls.dart';
 import '../widgets/counter_display.dart';
 
 /// Counter page that demonstrates Riverpod architecture
+@RoutePage()
 class CounterPage extends ConsumerWidget {
   const CounterPage({super.key});
 

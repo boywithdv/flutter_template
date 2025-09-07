@@ -40,6 +40,10 @@ dependencies:
   # Riverpod for state management
   flutter_riverpod: ^3.0.0-dev.17
   riverpod_annotation: ^3.0.0-dev.17
+  auto_route: ^10.1.2
+  riverpod_generator: ^3.0.0-dev.17
+  auto_route_generator: ^10.2.4
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -53,7 +57,6 @@ dev_dependencies:
   flutter_lints: ^6.0.0
   
   # Riverpod code generation
-  riverpod_generator: ^3.0.0-dev.17
   build_runner: ^2.6.0
   
   # Index file generator
@@ -110,14 +113,14 @@ index_generator:
     - '**.gen.dart'
   libraries:
     - directory_path: lib/
-      file_name: app.dart
+      file_name: app
       include:
         - domain/
         - infrastructure/
         - presentation/
     - directory_path: lib/domain/
-      file_name: domain.dart
+      file_name: domain
     - directory_path: lib/infrastructure/
-      file_name: infrastructure.dart
+      file_name: infrastructure
     - directory_path: lib/presentation/
-      file_name: presentation.dart
+      file_name: presentation
