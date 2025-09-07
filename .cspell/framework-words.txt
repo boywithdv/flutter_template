@@ -1,5 +1,7 @@
+appbundle
 cupertino
 prefs
+pubspec
 riverpod
 Riverpod
 Schyler
