@@ -49,10 +49,6 @@ echo "✏️  プロジェクト名を変更中..."
 sed -i.bak "s/name: flutter_template_monorepo/name: ${PROJECT_NAME}_monorepo/" pubspec.yaml
 rm pubspec.yaml.bak
 
-# melos.yaml
-sed -i.bak "s/name: flutter_template/name: $PROJECT_NAME/" melos.yaml
-rm melos.yaml.bak
-
 # Flutterアプリの pubspec.yaml
 sed -i.bak "s/name: flutter_template/name: $PROJECT_NAME/" packages/flutter_app/pubspec.yaml
 sed -i.bak "s/description: \"A new Flutter project.\"/description: \"$PROJECT_NAME Flutter application.\"/" packages/flutter_app/pubspec.yaml
