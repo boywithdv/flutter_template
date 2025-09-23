@@ -14,6 +14,12 @@
       "languageVersion": "3.5"
     },
     {
+      "name": "analyzer_buffer",
+      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/analyzer_buffer-0.1.10",
+      "packageUri": "lib/",
+      "languageVersion": "3.6"
+    },
+    {
       "name": "analyzer_plugin",
       "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/analyzer_plugin-0.13.4",
       "packageUri": "lib/",
@@ -261,9 +267,9 @@
     },
     {
       "name": "flutter_riverpod",
-      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/flutter_riverpod-3.0.0-dev.17",
+      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/flutter_riverpod-3.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.6"
+      "languageVersion": "3.8"
     },
     {
       "name": "flutter_test",
@@ -519,27 +525,27 @@
     },
     {
       "name": "riverpod",
-      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/riverpod-3.0.0-dev.17",
+      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/riverpod-3.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.6"
+      "languageVersion": "3.8"
     },
     {
       "name": "riverpod_analyzer_utils",
-      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/riverpod_analyzer_utils-1.0.0-dev.4",
+      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/riverpod_analyzer_utils-1.0.0-dev.6",
       "packageUri": "lib/",
-      "languageVersion": "3.6"
+      "languageVersion": "3.8"
     },
     {
       "name": "riverpod_annotation",
-      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/riverpod_annotation-3.0.0-dev.17",
+      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/riverpod_annotation-3.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.6"
+      "languageVersion": "3.8"
     },
     {
       "name": "riverpod_generator",
-      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/riverpod_generator-3.0.0-dev.17",
+      "rootUri": "file:///Users/tsukuda/.pub-cache/hosted/pub.dev/riverpod_generator-3.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.6"
+      "languageVersion": "3.8"
     },
     {
       "name": "shared_preferences",
@@ -795,8 +801,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.9.0",
+  "generatorVersion": "3.9.2",
   "flutterRoot": "file:///Users/tsukuda/fvm/versions/3.35.2",
-  "flutterVersion": "3.35.2",
+  "flutterVersion": "3.35.3",
   "pubCache": "file:///Users/tsukuda/.pub-cache"
 }
