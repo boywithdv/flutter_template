@@ -168,9 +168,10 @@
     },
     {
       "name": "riverpod_generator",
-      "version": "3.0.0-dev.17",
+      "version": "3.0.0",
       "dependencies": [
         "analyzer",
+        "analyzer_buffer",
         "build",
         "build_config",
         "collection",
@@ -196,7 +197,7 @@
     },
     {
       "name": "riverpod_annotation",
-      "version": "3.0.0-dev.17",
+      "version": "3.0.0",
       "dependencies": [
         "meta",
         "riverpod"
@@ -204,7 +205,7 @@
     },
     {
       "name": "flutter_riverpod",
-      "version": "3.0.0-dev.17",
+      "version": "3.0.0",
       "dependencies": [
         "collection",
         "flutter",
@@ -811,9 +812,10 @@
     },
     {
       "name": "riverpod_analyzer_utils",
-      "version": "1.0.0-dev.4",
+      "version": "1.0.0-dev.6",
       "dependencies": [
         "analyzer",
+        "analyzer_buffer",
         "collection",
         "crypto",
         "custom_lint_core",
@@ -840,14 +842,26 @@
       ]
     },
     {
+      "name": "analyzer_buffer",
+      "version": "0.1.10",
+      "dependencies": [
+        "analyzer",
+        "collection",
+        "meta",
+        "path",
+        "source_gen"
+      ]
+    },
+    {
       "name": "web",
       "version": "1.1.1",
       "dependencies": []
     },
     {
       "name": "riverpod",
-      "version": "3.0.0-dev.17",
+      "version": "3.0.0",
       "dependencies": [
+        "async",
         "clock",
         "collection",
         "meta",
