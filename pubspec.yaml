@@ -8,7 +8,7 @@ workspace:
   - packages/flutter_app
 
 dev_dependencies:
-  melos: ^7.1.1
+  melos: ^7.2.0
 
 
 melos:
