@@ -6,7 +6,10 @@ part of 'theme_selector_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 /// Provider for selecting the theme.
+
 @ProviderFor(ThemeSelector)
 const themeSelectorProvider = ThemeSelectorProvider._();
 
@@ -43,6 +46,8 @@ final class ThemeSelectorProvider
 
 String _$themeSelectorHash() => r'48fc54b4fc30c87d31c8e505ec2b0bb0102b2b5b';
 
+/// Provider for selecting the theme.
+
 abstract class _$ThemeSelector extends $Notifier<ThemeMode> {
   ThemeMode build();
   @$mustCallSuper
@@ -61,6 +66,3 @@ abstract class _$ThemeSelector extends $Notifier<ThemeMode> {
     element.handleValue(ref, created);
   }
 }
-
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

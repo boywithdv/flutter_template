@@ -6,13 +6,17 @@ part of 'counter_providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 /// Provider for CounterDataSource
 /// This is a singleton provider to maintain state
+
 @ProviderFor(counterDataSource)
 const counterDataSourceProvider = CounterDataSourceProvider._();
 
 /// Provider for CounterDataSource
 /// This is a singleton provider to maintain state
+
 final class CounterDataSourceProvider
     extends
         $FunctionalProvider<
@@ -60,10 +64,12 @@ final class CounterDataSourceProvider
 String _$counterDataSourceHash() => r'5b8f0e97780bd017df4425bba4baf54db976642f';
 
 /// Provider for CounterRepository
+
 @ProviderFor(counterRepository)
 const counterRepositoryProvider = CounterRepositoryProvider._();
 
 /// Provider for CounterRepository
+
 final class CounterRepositoryProvider
     extends
         $FunctionalProvider<
@@ -111,11 +117,13 @@ String _$counterRepositoryHash() => r'eeb1e0032f9d97d3e47682445164f2a2684f3139';
 
 /// FutureProvider for getting counter value
 /// This demonstrates Query/Subscription pattern
+
 @ProviderFor(counter)
 const counterProvider = CounterProvider._();
 
 /// FutureProvider for getting counter value
 /// This demonstrates Query/Subscription pattern
+
 final class CounterProvider
     extends $FunctionalProvider<AsyncValue<Counter>, Counter, FutureOr<Counter>>
     with $FutureModifier<Counter>, $FutureProvider<Counter> {
@@ -146,12 +154,13 @@ final class CounterProvider
   }
 }
 
-String _$counterHash() => r'e950a5b93603e9bb13cf68ae27b27e3cb1845aa5';
+String _$counterHash() => r'a2847a9c83ca9ce29b2aefe186fb440a02c20c88';
 
 /// Provider for counter increment operation
 /// This demonstrates Mutation pattern
+
 @ProviderFor(CounterNotifier)
-const counterNotifierProvider = CounterNotifierProvider._();
+const counterNotifier = CounterNotifierProvider._();
 
 /// Provider for counter increment operation
 /// This demonstrates Mutation pattern
@@ -164,7 +173,7 @@ final class CounterNotifierProvider
         from: null,
         argument: null,
         retry: null,
-        name: r'counterNotifierProvider',
+        name: r'counterNotifier',
         isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
@@ -178,7 +187,10 @@ final class CounterNotifierProvider
   CounterNotifier create() => CounterNotifier();
 }
 
-String _$counterNotifierHash() => r'29f847ba27495d72e71ad466a1d74aec0bd34ef6';
+String _$counterNotifierHash() => r'cc7ef7df482ffdc4ee7ba74e3cb49a7829a92ffb';
+
+/// Provider for counter increment operation
+/// This demonstrates Mutation pattern
 
 abstract class _$CounterNotifier extends $AsyncNotifier<Counter> {
   FutureOr<Counter> build();
@@ -198,6 +210,3 @@ abstract class _$CounterNotifier extends $AsyncNotifier<Counter> {
     element.handleValue(ref, created);
   }
 }
-
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

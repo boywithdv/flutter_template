@@ -11,8 +11,8 @@ class CounterControls extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // This demonstrates the Mutation pattern from the sequence diagram
-    final counterNotifier = ref.watch(counterNotifierProvider.notifier);
-    final counterState = ref.watch(counterNotifierProvider);
+    final counterNotifier = ref.watch(counterProvider.future);
+    final counterState = ref.watch(counterProvider);
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -24,7 +24,7 @@ class CounterControls extends ConsumerWidget {
             onPressed: counterState.isLoading
                 ? null
                 : () async {
-                    await counterNotifier.increment();
+                    await counterNotifier;
                   },
             tooltip: 'Increment',
             child: const Icon(Icons.add),
@@ -36,7 +36,7 @@ class CounterControls extends ConsumerWidget {
             onPressed: counterState.isLoading
                 ? null
                 : () async {
-                    await counterNotifier.decrement();
+                    await counterNotifier;
                   },
             tooltip: 'Decrement',
             backgroundColor: Colors.orange,
@@ -49,7 +49,7 @@ class CounterControls extends ConsumerWidget {
             onPressed: counterState.isLoading
                 ? null
                 : () async {
-                    await counterNotifier.reset();
+                    await counterNotifier;
                   },
             tooltip: 'Reset',
             backgroundColor: Colors.red,
@@ -62,7 +62,7 @@ class CounterControls extends ConsumerWidget {
             onPressed: counterState.isLoading
                 ? null
                 : () async {
-                    await counterNotifier.refresh();
+                    await counterNotifier;
                   },
             tooltip: 'Refresh',
             backgroundColor: Colors.green,

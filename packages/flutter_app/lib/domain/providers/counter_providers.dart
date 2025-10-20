@@ -29,14 +29,14 @@ CounterRepository counterRepository(Ref ref) {
 @riverpod
 Future<Counter> counter(Ref ref) async {
   developer.log('counter provider called');
-  final notifierValue = await ref.watch(counterNotifierProvider.future);
+  final notifierValue = await ref.watch(counterProvider.future);
   developer.log('counter value: ${notifierValue.value}');
   return notifierValue;
 }
 
 /// Provider for counter increment operation
 /// This demonstrates Mutation pattern
-@Riverpod(keepAlive: true)
+@Riverpod(keepAlive: true, name: 'counterNotifier')
 class CounterNotifier extends _$CounterNotifier {
   @override
   Future<Counter> build() async {
