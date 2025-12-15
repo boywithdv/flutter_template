@@ -11,8 +11,7 @@ class CounterControls extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // This demonstrates the Mutation pattern from the sequence diagram
-    final counterNotifier = ref.watch(counterProvider.future);
-    final counterState = ref.watch(counterProvider);
+    final counterState = ref.watch(counterNotifier);
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -23,8 +22,8 @@ class CounterControls extends ConsumerWidget {
           FloatingActionButton(
             onPressed: counterState.isLoading
                 ? null
-                : () async {
-                    await counterNotifier;
+                : () {
+                    ref.read(counterNotifier.notifier).increment();
                   },
             tooltip: 'Increment',
             child: const Icon(Icons.add),
@@ -35,8 +34,8 @@ class CounterControls extends ConsumerWidget {
           FloatingActionButton(
             onPressed: counterState.isLoading
                 ? null
-                : () async {
-                    await counterNotifier;
+                : () {
+                    ref.read(counterNotifier.notifier).decrement();
                   },
             tooltip: 'Decrement',
             backgroundColor: Colors.orange,
@@ -48,8 +47,8 @@ class CounterControls extends ConsumerWidget {
           FloatingActionButton(
             onPressed: counterState.isLoading
                 ? null
-                : () async {
-                    await counterNotifier;
+                : () {
+                    ref.read(counterNotifier.notifier).reset();
                   },
             tooltip: 'Reset',
             backgroundColor: Colors.red,
@@ -61,8 +60,8 @@ class CounterControls extends ConsumerWidget {
           FloatingActionButton(
             onPressed: counterState.isLoading
                 ? null
-                : () async {
-                    await counterNotifier;
+                : () {
+                    ref.read(counterNotifier.notifier).refresh();
                   },
             tooltip: 'Refresh',
             backgroundColor: Colors.green,

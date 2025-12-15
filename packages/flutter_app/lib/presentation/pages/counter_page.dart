@@ -23,7 +23,7 @@ class CounterPage extends ConsumerWidget {
             onPressed: () async {
               // This demonstrates the refresh pattern from the sequence diagram
               // Refreshを実行し、新しい値を待機
-              final newValue = await ref.refresh(counterProvider.future);
+              final newValue = await ref.refresh(counterNotifier.future);
               if (context.mounted) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(

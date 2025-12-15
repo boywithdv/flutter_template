@@ -24,16 +24,6 @@ CounterRepository counterRepository(Ref ref) {
   return CounterRepositoryImpl(dataSource);
 }
 
-/// FutureProvider for getting counter value
-/// This demonstrates Query/Subscription pattern
-@riverpod
-Future<Counter> counter(Ref ref) async {
-  developer.log('counter provider called');
-  final notifierValue = await ref.watch(counterProvider.future);
-  developer.log('counter value: ${notifierValue.value}');
-  return notifierValue;
-}
-
 /// Provider for counter increment operation
 /// This demonstrates Mutation pattern
 @Riverpod(keepAlive: true, name: 'counterNotifier')

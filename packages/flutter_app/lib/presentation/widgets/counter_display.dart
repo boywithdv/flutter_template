@@ -13,7 +13,7 @@ class CounterDisplay extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // This demonstrates the Query/Subscription pattern from the sequence diagram
-    final counterAsync = ref.watch(counterProvider);
+    final counterAsync = ref.watch(counterNotifier);
     developer.log('CounterDisplay build: ${counterAsync.value?.value}');
 
     return Column(

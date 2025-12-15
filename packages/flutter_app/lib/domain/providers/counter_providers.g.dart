@@ -115,47 +115,6 @@ final class CounterRepositoryProvider
 
 String _$counterRepositoryHash() => r'eeb1e0032f9d97d3e47682445164f2a2684f3139';
 
-/// FutureProvider for getting counter value
-/// This demonstrates Query/Subscription pattern
-
-@ProviderFor(counter)
-const counterProvider = CounterProvider._();
-
-/// FutureProvider for getting counter value
-/// This demonstrates Query/Subscription pattern
-
-final class CounterProvider
-    extends $FunctionalProvider<AsyncValue<Counter>, Counter, FutureOr<Counter>>
-    with $FutureModifier<Counter>, $FutureProvider<Counter> {
-  /// FutureProvider for getting counter value
-  /// This demonstrates Query/Subscription pattern
-  const CounterProvider._()
-    : super(
-        from: null,
-        argument: null,
-        retry: null,
-        name: r'counterProvider',
-        isAutoDispose: true,
-        dependencies: null,
-        $allTransitiveDependencies: null,
-      );
-
-  @override
-  String debugGetCreateSourceHash() => _$counterHash();
-
-  @$internal
-  @override
-  $FutureProviderElement<Counter> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
-
-  @override
-  FutureOr<Counter> create(Ref ref) {
-    return counter(ref);
-  }
-}
-
-String _$counterHash() => r'a2847a9c83ca9ce29b2aefe186fb440a02c20c88';
-
 /// Provider for counter increment operation
 /// This demonstrates Mutation pattern
 
