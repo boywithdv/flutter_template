@@ -531,9 +531,9 @@
     },
     {
       "name": "shared_preferences",
-      "rootUri": "file:///Users/usr4100224/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3",
+      "rootUri": "file:///Users/usr4100224/.pub-cache/hosted/pub.dev/shared_preferences-2.5.4",
       "packageUri": "lib/",
-      "languageVersion": "3.5"
+      "languageVersion": "3.9"
     },
     {
       "name": "shared_preferences_android",
