@@ -1,6 +1,7 @@
 import 'dart:developer' as developer;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widget_previews.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../domain/providers/counter_providers.dart';
@@ -62,4 +63,28 @@ class CounterDisplay extends ConsumerWidget {
       ],
     );
   }
+}
+
+@Preview(name: 'counter_display')
+Widget counterDisplayPreview() {
+  return Scaffold(
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: const [
+          Text(
+            'You have pushed the button this many times:',
+            style: TextStyle(fontSize: 16),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: 10),
+          Text(
+            '0', // placeholder value for preview
+            style: TextStyle(fontSize: 24),
+          ),
+        ],
+      ),
+    ),
+  );
 }
