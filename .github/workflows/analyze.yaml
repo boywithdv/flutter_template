@@ -1,0 +1,49 @@
+name: Analyze & Format (Flutter)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter with FVM
+        id: setup-flutter
+        uses: kuhnroyal/flutter-fvm-config-action/setup@v3
+
+      - name: Install Melos and bootstrap
+        uses: bluefireteam/melos-action@v3
+        with:
+          run-bootstrap: true
+
+      - name: Check if generated files are up to date
+        run: |
+          melos gen
+          if ! git diff --exit-code; then
+            echo "❌ Generated files are not up to date."
+            echo "Please run 'melos gen' locally and commit the changes."
+            exit 1
+          fi
+          echo "✅ Generated files are up to date."
+
+      - name: Analyze packages
+        run: |
+          melos analyze
+
+      - name: Check formatting (CI)
+        run: |
+          melos exec -- dart format . --set-exit-if-changed
+
