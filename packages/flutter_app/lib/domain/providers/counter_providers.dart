@@ -46,7 +46,6 @@ class CounterNotifier extends _$CounterNotifier {
       final newCounter = await repository.increment();
       developer.log('new counter value after increment: ${newCounter.value}');
       state = AsyncValue.data(newCounter);
-      ref.notifyListeners();
     } catch (error, stackTrace) {
       developer.log('increment error: $error');
       state = AsyncValue.error(error, stackTrace);
@@ -62,7 +61,6 @@ class CounterNotifier extends _$CounterNotifier {
       final newCounter = await repository.decrement();
       developer.log('new counter value after decrement: ${newCounter.value}');
       state = AsyncValue.data(newCounter);
-      ref.notifyListeners();
     } catch (error, stackTrace) {
       developer.log('decrement error: $error');
       state = AsyncValue.error(error, stackTrace);
@@ -78,7 +76,6 @@ class CounterNotifier extends _$CounterNotifier {
       final newCounter = await repository.reset();
       developer.log('new counter value after reset: ${newCounter.value}');
       state = AsyncValue.data(newCounter);
-      ref.notifyListeners();
     } catch (error, stackTrace) {
       developer.log('reset error: $error');
       state = AsyncValue.error(error, stackTrace);
@@ -94,7 +91,6 @@ class CounterNotifier extends _$CounterNotifier {
       final newCounter = await repository.getCounter();
       developer.log('new counter value after refresh: ${newCounter.value}');
       state = AsyncValue.data(newCounter);
-      ref.notifyListeners();
     } catch (error, stackTrace) {
       developer.log('refresh error: $error');
       state = AsyncValue.error(error, stackTrace);

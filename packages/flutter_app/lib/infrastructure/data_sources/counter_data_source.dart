@@ -5,11 +5,6 @@ import '../../domain/entities/counter.dart';
 /// Data source for Counter operations
 /// This simulates API calls and local storage
 class CounterDataSource {
-  // Singleton instance
-  static final CounterDataSource _instance = CounterDataSource._internal();
-  factory CounterDataSource() => _instance;
-  CounterDataSource._internal();
-
   // Simulate local storage
   int _currentValue = 0;
 
