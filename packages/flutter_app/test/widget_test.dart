@@ -25,19 +25,23 @@ void main() {
     );
   }
 
-  testWidgets('CounterPage displays initial counter value',
-      (WidgetTester tester) async {
+  testWidgets('CounterPage displays initial counter value', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(await createApp());
     await tester.pumpAndSettle();
 
     // Verify that initial counter value is 0
     expect(find.text('0'), findsOneWidget);
-    expect(find.text('You have pushed the button this many times:'),
-        findsOneWidget);
+    expect(
+      find.text('You have pushed the button this many times:'),
+      findsOneWidget,
+    );
   });
 
-  testWidgets('Counter increments when increment button is tapped',
-      (WidgetTester tester) async {
+  testWidgets('Counter increments when increment button is tapped', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(await createApp());
     await tester.pumpAndSettle();
 
@@ -61,8 +65,9 @@ void main() {
     expect(find.text('2'), findsOneWidget);
   });
 
-  testWidgets('Counter decrements when decrement button is tapped',
-      (WidgetTester tester) async {
+  testWidgets('Counter decrements when decrement button is tapped', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(await createApp());
     await tester.pumpAndSettle();
 
@@ -84,8 +89,9 @@ void main() {
     expect(find.text('0'), findsOneWidget);
   });
 
-  testWidgets('Counter resets when reset button is tapped',
-      (WidgetTester tester) async {
+  testWidgets('Counter resets when reset button is tapped', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(await createApp());
     await tester.pumpAndSettle();
 
@@ -112,8 +118,9 @@ void main() {
     expect(find.text('5'), findsNothing);
   });
 
-  testWidgets('Counter refreshes when refresh button in AppBar is tapped',
-      (WidgetTester tester) async {
+  testWidgets('Counter refreshes when refresh button in AppBar is tapped', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(await createApp());
     await tester.pumpAndSettle();
 
@@ -140,8 +147,9 @@ void main() {
     expect(find.text('3'), findsOneWidget);
   });
 
-  testWidgets('CounterPage has all control buttons',
-      (WidgetTester tester) async {
+  testWidgets('CounterPage has all control buttons', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(await createApp());
     await tester.pumpAndSettle();
 
@@ -152,8 +160,9 @@ void main() {
     expect(find.byIcon(Icons.sync), findsOneWidget);
   });
 
-  testWidgets('CounterPage shows app title and correct text',
-      (WidgetTester tester) async {
+  testWidgets('CounterPage shows app title and correct text', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(await createApp());
     await tester.pumpAndSettle();
 
@@ -161,7 +170,9 @@ void main() {
     expect(find.text('Riverpod Counter Example'), findsOneWidget);
 
     // Verify instruction text
-    expect(find.text('You have pushed the button this many times:'),
-        findsOneWidget);
+    expect(
+      find.text('You have pushed the button this many times:'),
+      findsOneWidget,
+    );
   });
 }
