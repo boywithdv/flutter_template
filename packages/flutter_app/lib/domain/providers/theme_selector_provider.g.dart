@@ -11,13 +11,13 @@ part of 'theme_selector_provider.dart';
 /// Provider for selecting the theme.
 
 @ProviderFor(ThemeSelector)
-const themeSelectorProvider = ThemeSelectorProvider._();
+final themeSelectorProvider = ThemeSelectorProvider._();
 
 /// Provider for selecting the theme.
 final class ThemeSelectorProvider
     extends $NotifierProvider<ThemeSelector, ThemeMode> {
   /// Provider for selecting the theme.
-  const ThemeSelectorProvider._()
+  ThemeSelectorProvider._()
     : super(
         from: null,
         argument: null,
@@ -53,7 +53,6 @@ abstract class _$ThemeSelector extends $Notifier<ThemeMode> {
   @$mustCallSuper
   @override
   void runBuild() {
-    final created = build();
     final ref = this.ref as $Ref<ThemeMode, ThemeMode>;
     final element =
         ref.element
@@ -63,6 +62,6 @@ abstract class _$ThemeSelector extends $Notifier<ThemeMode> {
               Object?,
               Object?
             >;
-    element.handleValue(ref, created);
+    element.handleCreate(ref, build);
   }
 }
