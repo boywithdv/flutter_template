@@ -146,7 +146,7 @@ final class CounterNotifierProvider
   CounterNotifier create() => CounterNotifier();
 }
 
-String _$counterNotifierHash() => r'cc7ef7df482ffdc4ee7ba74e3cb49a7829a92ffb';
+String _$counterNotifierHash() => r'2e5eb67701db51949a04d9c989f27fad2d33112c';
 
 /// Provider for counter increment operation
 /// This demonstrates Mutation pattern
